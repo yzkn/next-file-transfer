@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# next-file-transfer
 
-## Getting Started
+P2Pファイル共有
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## initialization
+
+```powershell
+yarn create next-app .
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> √ Would you like to use TypeScript? ... No
+>
+> √ Would you like to use ESLint? ... Yes
+>
+> √ Would you like to use Tailwind CSS? ... Yes
+>
+> √ Would you like your code inside a `src/` directory? ... Yes
+>
+> √ Would you like to use App Router? (recommended) ... Yes
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+> √ Would you like to use Turbopack for `next dev`? ... No
 
-To learn more about Next.js, take a look at the following resources:
+※既定値はYesだが、設定すると実行時に以下のエラーが発生するので変更
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+FATAL: An unexpected Turbopack error occurred. Please report the content of *****.log, along with a description of what you were doing when the error occurred, to https://github.com/vercel/next.js/issues/new
+[Error [TurbopackInternalError]: Next.js package not found
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> √ Would you like to customize the import alias (`@/*` by default)? ... No
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## 動作確認
+
+```powershell
+yarn dev
+```
+
+>    ▲ Next.js 15.1.8
+>
+>    - Local:        http://localhost:3000
+>
+>    - Network:      http://192.168.0.40:3000
+
+
+
+## 静的エクスポート
+
+```powershell
+yarn add -D serve
+```
+
+- package.json
+
+```plaintext
+  "scripts" 内
+
+    "serve": "yarn build && serve ./out"
+```
+
+- next.config.mjs
+
+```plaintext
+nextConfig 内
+
+    output: 'export',
+```
+
+```powershell
+yarn serve
+```
+
+---
+
+Copyright (c) 2025 YA-androidapp(https://github.com/yzkn) All rights reserved.
