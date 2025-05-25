@@ -10,9 +10,18 @@
     "serve": "yarn build && serve ./out"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.0.1",
+    "@reduxjs/toolkit": "^2.8.2",
+    "antd": "^5.4.2",
+    "js-file-download": "^0.4.12",
     "next": "15.3.2",
+    "peerjs": "^1.5.2",
+    "qrcode.react": "^4.2.0",
+    "query-string": "^9.2.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0",
+    "redux": "^4.2.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
